@@ -19,7 +19,7 @@ if(isset($_SESSION['email']))
 $dt=date('Y-m-d');
 //echo $dt;
 
-$patientdata=mysqli_query($con,"select * from appointmentlist where PDate='$dt' ");
+$patientdata=mysqli_query($con,"select * from listofappointment where PDate='$dt' ");
 $stafflist=mysqli_query($con,"select * from staffdata");
 
 
@@ -336,7 +336,7 @@ $stafflist=mysqli_query($con,"select * from staffdata");
 
                                                      $dt=date('Y-m-d');
                                                      //echo $dt;
-                                                     $sql="SELECT count(pid) As total from appointmentlist where PDate='$dt'";
+                                                     $sql="SELECT count(pid) As total from listofappointment where PDate='$dt'";
                                                      $Result=mysqli_query($con,$sql);
                                                      $value=mysqli_fetch_assoc($Result);
                                                      $ListPid=$value['total'];
@@ -368,7 +368,7 @@ $stafflist=mysqli_query($con,"select * from staffdata");
 
                                                     
                                                     
-                                                     $sql="SELECT count(pid) As total from appointmentlist where PStatus='Stay'";
+                                                     $sql="SELECT count(pid) As total from listofappointment where PStatus='Stay'";
                                                      $Result=mysqli_query($con,$sql);
                                                      $value=mysqli_fetch_assoc($Result);
                                                      $StayPatient=$value['total'];

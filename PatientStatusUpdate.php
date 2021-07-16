@@ -6,7 +6,7 @@ $id=$_GET['i'];
 //echo $id;
 //echo $dt;
 
-$Patient=mysqli_query($con,"select * from appointmentlist  where pid='$id' ");
+$Patient=mysqli_query($con,"select * from listofappointment  where pid='$id' ");
 $data=mysqli_fetch_array($Patient)
 
 ?>
@@ -167,7 +167,7 @@ if(isset($_POST['dn']))
   $pstatus=$_POST['pst'];
 
 
-  $patientstatus=mysqli_query($con,"UPDATE appointmentlist SET Name = '$pnm',PType='$pty',Age='$page',PStatus='$pstatus' WHERE pid = '$id'");
+  $patientstatus=mysqli_query($con,"UPDATE listofappointment SET Name = '$pnm',PType='$pty',Age='$page',PStatus='$pstatus' WHERE pid = '$id'");
 
   if($patientstatus)
    {

@@ -13,7 +13,7 @@ if(isset($_SESSION['email']))
  require("fpdf183/fpdf.php");
 
 
- $res=mysqli_query($con,"select  Mid,MName,MPrice,MStock from medicinestore");
+ $res=mysqli_query($con,"select  Mid,MName,MPrice,MStock from storeofmedicine");
 
 
  $pdf=new FPDF();

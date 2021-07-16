@@ -117,7 +117,7 @@ if(isset($_POST['btn']))
  }
 
 
-  $login=mysqli_query($con,"select * from doctordate where  Email='$em' and Password='$pass'");
+  $login=mysqli_query($con,"select * from datadoctor   where  Email='$em' and Password='$pass'");
 
   $count=mysqli_num_rows($login);
   if($count>0){

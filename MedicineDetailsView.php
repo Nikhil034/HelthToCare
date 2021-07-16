@@ -2,7 +2,7 @@
 
 <?php
 $name=$_GET['i'];
-$medicinedata=mysqli_query($con,"select * from medicinestore where MName='$name'");
+$medicinedata=mysqli_query($con,"select * from storeofmedicine where MName='$name'");
 $Data=mysqli_fetch_array($medicinedata)
 
 ?>
@@ -179,7 +179,7 @@ if(isset($_POST['btn']))
 
 
 
-  $editmedicine=mysqli_query($con,"UPDATE medicinestore SET MName = '$mnm',MDescription='$mdes',Mvalidity='$mvalid',MPrice='$mpr',MStock='$mst' WHERE Mid = '$mid'");
+  $editmedicine=mysqli_query($con,"UPDATE storeofmedicine SET MName = '$mnm',MDescription='$mdes',Mvalidity='$mvalid',MPrice='$mpr',MStock='$mst' WHERE Mid = '$mid'");
 
   if($editmedicine)
    {

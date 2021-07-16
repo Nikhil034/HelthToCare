@@ -111,15 +111,20 @@ body{
     <label>CaseDetails</label>
     <textarea class="form-control" name="cdit" rows="2" required="" placeholder="Enter Patient CaseDetails"></textarea>
     <br>
-    <label>badCharges</label>
-    <input class="form-control" type="number" placeholder="Enter Patient BadCharges" name="pbad" required="">
-    <br>
+    
     <label>Medicine</label>
     <textarea class="form-control" name="pmed" rows="2" required="" placeholder="Enter Patient Medicine List"></textarea>
     <br>
 
     <label>Medicine Pay</label>
     <input class="form-control" type="number" placeholder="Enter Patient Pay for Medicine" name="ppay" required="">
+    <br>
+
+    <label>badCharges</label>
+    <input class="form-control" type="number" placeholder="Enter Patient BadCharges" name="pbad" required="">
+    <br>
+    <label>TotalPay</label>
+    <input class="form-control" type="number" placeholder="Enter Patient TotalPay" name="ptpay" required="">
 
     <br>
     <input type="submit" name="btn" class="btn btn-success btn-block">
@@ -128,7 +133,6 @@ body{
 
 
   
-
 
 
 
@@ -158,16 +162,7 @@ body{
 
 </div>       
 </body>
-<?php
- }
- else
- {
-  header("location:login.php");
- ?>
- <?php
-  }
-  ?> 
- 
+
 
 
 </html>
@@ -185,10 +180,13 @@ if(isset($_POST['btn']))
   $bc=$_POST['pbad'];
   $mdlist=$_POST['pmed'];
   $mdpay=$_POST['ppay'];
+  $tpay=$_POST['ptpay'];
+
+  $data=print_r($_POST);
+  echo $data;
 
 
-  $add=mysqli_query($con,"insert into billofpatient(Name,Phone,Address,CaseDetails,badChares,medicine,medicinetotal)values('$nm','$pn','$pad','$pcase','$bc','$mdlist','$mdpay')");
-
+   $add=mysqli_query($con,"insert into patientbill(Name,Phone,Address,CaseDetails,Badchares,medicine,Medicinetotal,AmoutofBill)values('$nm','$pn','$pad','$pcase','$bc','$mdlist','$mdpay','$tpay')");
 
  if($add){
   echo"<script>alert('Patient Bill Add Succesfully')</script>";
@@ -200,3 +198,13 @@ if(isset($_POST['btn']))
 }
 
 ?>
+<?php
+ }
+ else
+ {
+  header("location:login.php");
+ ?>
+ <?php
+  }
+  ?> 
+

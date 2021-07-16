@@ -2,7 +2,7 @@
 
 <?php
 
-$profiledata=mysqli_query($con,"select * from doctordate");
+$profiledata=mysqli_query($con,"select * from datadoctor  ");
 
 ?>
 

@@ -2,7 +2,7 @@
 
 <?php
 
-$medicinedata=mysqli_query($con,"select * from medicinestore");
+$medicinedata=mysqli_query($con,"select * from storeofmedicine");
 
 
 ?>

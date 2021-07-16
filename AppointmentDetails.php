@@ -2,7 +2,7 @@
 
 <?php
 
-$profiledata=mysqli_query($con,"select * from doctordate");
+$profiledata=mysqli_query($con,"select * from datadoctor");
 
 ?>
 <?php
@@ -190,7 +190,7 @@ if(isset($_POST['btn']))
   $Patientmb=$_POST['pmob'];
   $Patientdate=$_POST['pdate'];
 
-  $query=mysqli_query($con,"insert into appointmentlist(Name,PType,Age,Mobile,PDate)values('$Patientnm','$Patienttype','$Patientage','$Patientmb','$Patientdate')");
+  $query=mysqli_query($con,"insert into listofappointment(Name,PType,Age,Mobile,PDate)values('$Patientnm','$Patienttype','$Patientage','$Patientmb','$Patientdate')");
 
   if($query){
     echo"<div class='alert alert-success alert-dismissible'>

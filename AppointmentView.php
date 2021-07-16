@@ -5,7 +5,7 @@
 $dt=date('Y-m-d');
 //echo $dt;
 
-$Appointmentlist=mysqli_query($con,"select * from appointmentlist  where PDate='$dt' ");
+$Appointmentlist=mysqli_query($con,"select * from listofappointment  where PDate='$dt' ");
 
 ?>
 <?php

@@ -3,7 +3,7 @@
 
 <?php
   
-$data=mysqli_query($con,"select * from `billofpatient");
+$data=mysqli_query($con,"select * from billofpatient");
 
 
 
@@ -100,11 +100,13 @@ body{
   <div class="card-body"> 
     <table class="table table-hover">
       <thead>
+
       
         <tr>
           <th>Name</th>
-          <th>Phone</th>
-          <th>Pay</th>
+          <th>Bad</th>
+          <th>Mpay</th>
+          <th>Total</th>
         </tr>
       </thead>
       <tbody>
@@ -118,32 +120,10 @@ body{
       	<tr>
 
       		<td><?php echo $row['Name'];?></td>
-      		<td><?php echo $row['Phone'];?></td>
-      		<td>
-      			
-      			 <button type="button" class="btn btn-success " data-toggle="modal" data-target="#myModal">Bill Pay</button>
+      		<td><?php echo $row['badchares'];?></td>
+          <td><?php echo $row['medicinetotal'];?></td>
+          <td><?php echo $row['AmountofBill'];?></td>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-        </div>
-        <div class="modal-body">
-          
-          
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-      		</td>
       	</tr>
       
       </tbody>

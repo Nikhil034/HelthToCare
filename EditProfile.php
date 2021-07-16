@@ -3,7 +3,7 @@
 <?php
 $name=$_GET['i'];
 //echo $name;
-$profiledata=mysqli_query($con,"select * from doctordate where Name='$name'");
+$profiledata=mysqli_query($con,"select * from datadoctor where Name='$name'");
 $doctordate=mysqli_fetch_array($profiledata)
 
 ?>

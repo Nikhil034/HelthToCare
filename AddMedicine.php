@@ -193,7 +193,7 @@ if(isset($_POST['btn']))
   $st=$_POST['mst'];
 
 
-$addmedicine=mysqli_query($con,"insert into medicinestore(MName,MDescription,Mvalidity,MPrice,MStock)values('$nm','$des','$valid','$pr','$st')");
+$addmedicine=mysqli_query($con,"insert into storeofmedicine(MName,MDescription,Mvalidity,MPrice,MStock)values('$nm','$des','$valid','$pr','$st')");
 
  
        if($addmedicine)

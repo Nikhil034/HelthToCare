@@ -2,7 +2,7 @@
 
 <?php
 
-$patient=mysqli_query($con,"select * from appointmentlist");
+$patient=mysqli_query($con,"select * from listofappointment");
 
 
 ?>
