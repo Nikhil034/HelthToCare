@@ -1,13 +1,7 @@
 <?php include 'connection.php';?>
 
 
-<?php
-$dt=date('Y-m-d');
-//echo $dt;
 
-$Appointmentlist=mysqli_query($con,"select * from appointmentlist  where PDate='$dt' ");
-
-?>
 <?php
 
 session_start();
@@ -111,6 +105,7 @@ body{
 
       <label>*Role</label>
       <input class="form-control" type="text" placeholder="Member Role" name="srole" required="" style="border-radius: 5px;">
+      <br>
 
       <label>*Salary</label>
       <input class="form-control" type="number" placeholder="Member Salary" name="ssal" required="" style="border-radius: 5px;">
@@ -171,8 +166,10 @@ if(isset($_POST['sbtn']))
   $wd=$_POST['sday'];
   $add=$_POST['sadd'];
 
-  $AddMember=mysqli_query($con,"insert into staffdata(Name,Email,Phoneno,Role,Salary,Workday,Address)values('$nm','$em','$pn','$role','$sal','$wd','$add')");
+  //$data=print_r($_POST);
+  //echo $data;
 
+  $AddMember=mysqli_query($con,"insert into detailsofstaff(Name,Email,Phoneno,Role,Salary,Workday,Address)values('$nm','$em','$pn','$role','$sal','$wd','$add')");
    if($AddMember){
     echo"<div class='alert alert-success alert-dismissible'>
   <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>

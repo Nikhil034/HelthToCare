@@ -3,7 +3,7 @@
 
 <?php
   
-$data=mysqli_query($con,"select * from billofpatient");
+$data=mysqli_query($con,"select * from patientbill");
 
 
 
@@ -122,7 +122,7 @@ body{
       		<td><?php echo $row['Name'];?></td>
       		<td><?php echo $row['badchares'];?></td>
           <td><?php echo $row['medicinetotal'];?></td>
-          <td><?php echo $row['AmountofBill'];?></td>
+          <td><?php echo $row['AmoutofBill'];?></td>
 
       	</tr>
       

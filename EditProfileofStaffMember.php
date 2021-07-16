@@ -3,7 +3,7 @@
 <?php
 $name=$_GET['i'];
 //echo $name;
-$profiledata=mysqli_query($con,"select * from staffdata where Name='$name'");
+$profiledata=mysqli_query($con,"select * from detailsofstaff where Name='$name'");
 $staffdata=mysqli_fetch_array($profiledata)
 
 ?>

@@ -2,7 +2,7 @@
 
 <?php
 $id=$_GET['i'];
-$profiledata=mysqli_query($con,"select * from staffdata where Name='$id'");
+$profiledata=mysqli_query($con,"select * from detailsofstaff where Name='$id'");
 
 ?>
 <?php
@@ -108,7 +108,7 @@ $profiledata))
 
 <div class="d-flex p-2 bg-info text-white">
   
-  WorkDay :  <?php echo $row['WorkDay'];?>
+  WorkDay :  <?php echo $row['Workday'];?>
 
 </div>
 
