@@ -1,3 +1,4 @@
+
 <?php 
 
 include('connection.php');
@@ -10,7 +11,8 @@ session_start();
 
 if(isset($_SESSION['email']))
 {
-  //echo $_SESSION['email'];
+   $mail=$_SESSION['email'];
+   // echo"Welcome To HelthToCare Doctor" .$mail;
 ?>
 
 
@@ -20,7 +22,7 @@ $dt=date('Y-m-d');
 //echo $dt;
 
 $patientdata=mysqli_query($con,"select * from listofappointment where PDate='$dt' ");
-$stafflist=mysqli_query($con,"select * from staffdata");
+$stafflist=mysqli_query($con,"select * from detailsofstaff");
 
 
 ?>
