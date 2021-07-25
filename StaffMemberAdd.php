@@ -91,31 +91,31 @@ body{
 
      <form method="post" autocomplete="off">
 
-      <label>*Name</label>
+      <label style="color: red">*Name</label>
       <input class="form-control" type="text" placeholder="Member Name" name="snm" required="" style="border-radius: 5px;">
       <br>
 
-      <label>*Email</label>
+      <label style="color: red">*Email</label>
       <input class="form-control" type="email" placeholder="Member Email" name="semail" required="" style="border-radius: 5px;">
       <br>
 
-         <label>*Phone</label>
+         <label style="color: red">*Phone</label>
       <input class="form-control" type="number" placeholder="Member PhoneNo" name="sno" required="" style="border-radius: 5px;">
       <br>
 
-      <label>*Role</label>
+      <label style="color: red">*Role</label>
       <input class="form-control" type="text" placeholder="Member Role" name="srole" required="" style="border-radius: 5px;">
       <br>
 
-      <label>*Salary</label>
+      <label style="color: red">*Salary</label>
       <input class="form-control" type="number" placeholder="Member Salary" name="ssal" required="" style="border-radius: 5px;">
       <br>
 
-      <label>*Workday</label>
+      <label style="color: red">*Workday</label>
       <input class="form-control" type="text" placeholder="Member Workday" name="sday" required="" style="border-radius: 5px;">
 
-      <br>
-         <label>*Address</label>
+      <br >
+         <label style="color: red">*Address</label>
         <textarea class="form-control"  rows="3" name="sadd" placeholder="Member Address"></textarea>
 
         <br>

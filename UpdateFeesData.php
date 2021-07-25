@@ -5,7 +5,7 @@
 
 $nm=$_GET['i'];
 //echo $nm;
-$feesdata=mysqli_query($con,"select * from staffdata where Name='$nm'");
+$feesdata=mysqli_query($con,"select * from detailsofstaff where Name='$nm'");
 $result=mysqli_fetch_array($feesdata);
 
 
@@ -144,7 +144,7 @@ if(isset($_POST['btn']))
   $mpay=$_POST['spay'];
   $gdate=$_POST['pdate'];
 
- $pay=mysqli_query($con,"update stafffees set pay='$mpay',Date='$gdate' where Name='$mnm'");
+ $pay=mysqli_query($con,"update feesstaff set Pay='$mpay',Date='$gdate' where Name='$mnm'");
 
   if($pay)
    {

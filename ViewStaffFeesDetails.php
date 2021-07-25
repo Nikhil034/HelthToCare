@@ -5,7 +5,7 @@
 
 $nm=$_GET['i'];
 //echo $nm;
-$feesdata=mysqli_query($con,"select * from stafffees where Name='$nm'");
+$feesdata=mysqli_query($con,"select * from feesstaff where Name='$nm'");
 
 
 
@@ -118,8 +118,8 @@ body{
         <td><?php echo $row['Pay'];?></td>
       </tr>
       <tr>  
-        <th>Date</th>
-        <td><?php echo $row['Date'];?></td>
+        <th>Date/Time</th>
+        <td><?php echo $row['Time'];?></td>
       </tr>
     </thead>
     <?php

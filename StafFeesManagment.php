@@ -3,7 +3,7 @@
 
 <?php
 
-$feesdata=mysqli_query($con,"select * from staffdata");
+$feesdata=mysqli_query($con,"select * from detailsofstaff");
 
 
 ?>
